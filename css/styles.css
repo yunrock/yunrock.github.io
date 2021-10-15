@@ -37,7 +37,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #cede2b;/*#*/
-  --bs-btn-active: #87d421;/*#cede2b*/
+  --bs-btn-active: #4e6c25;/*#cede2b*/
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -48,7 +48,7 @@
 
   --bs-cyberblue-rgb: 19, 99, 119;
 
-  --bs-primary-rgb: 138,243,0;
+  --bs-primary-rgb: 206, 222, 43;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -86,6 +86,11 @@
   }
 }
 
+.main-element {
+  height: 100%;
+  opacity: 1;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -104,7 +109,7 @@ hr {
   color: inherit;
   background-color: currentColor;
   border: 0;
-  opacity: 0.25;
+  /*opacity: 0.25;*/
 }
 
 hr:not([size]) {
@@ -129,6 +134,7 @@ h1, .h1 {
 }
 
 .my-name{
+  text-shadow: 0px 0px 15px #fff;
   font-family: "Oxanium";
   letter-spacing: 20px;
   font-size: 4.25rem !important;
@@ -3044,29 +3050,29 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
+  color: #000;
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
-  clip-path: polygon(20% 0%, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0% 20%);
+  clip-path: polygon(20px 0%, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0% 20px);
 }
 .btn-primary:hover {
-  color: #fff;
+  color: #000;
   background-color: var(--bs-btn-active);
   border-color: #c34e2e;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
-  color: #fff;
-  background-color: #cf5331;
+  color: #000;
+  background-color: var(--bs-btn-active);
   border-color: #c34e2e;
   box-shadow: 0 0 0 0.25rem rgba(246, 122, 88, 0.5);
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #c34e2e;
-  border-color: #b74a2c;
+  background-color: #c3b82e;
+  border-color: #8b8523;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(246, 122, 88, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(236, 246, 88, 0.5);
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
@@ -7685,6 +7691,10 @@ textarea.form-control-lg {
   text-align: center !important;
 }
 
+.text-title-div {
+  font-size: 3rem !important;
+}
+
 .text-decoration-none {
   text-decoration: none !important;
 }
@@ -7731,7 +7741,7 @@ textarea.form-control-lg {
 
 .text-icon {
   --bs-text-opacity: 1;
-  color: var(--bs-gray-500) !important;
+  color: var(--bs-primary) !important;
 }
 
 .text-secondary {
@@ -11315,6 +11325,11 @@ body {
   padding: 8rem 0;
 }
 
+.page-section-grey {
+  background: rgb(73,80,87);
+  background: linear-gradient(0deg, rgba(73,80,87,1) 0%, rgba(84,91,98,1) 50%, rgba(73,80,87,1) 100%);
+}
+
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75) !important;
 }
@@ -11340,7 +11355,7 @@ hr.divider2 {
   max-width: 100%;
   margin: 1.5rem auto;
   background-color: var(--bs-primary);
-  opacity: 1;
+  box-shadow: 0px 0px 9px 0px var(--bs-primary);
 }
 hr.divider3 {
   height: 0.05rem;
@@ -11464,7 +11479,7 @@ header.masthead h1, header.masthead .h1 {
   bottom: 0;
   text-align: center;
   opacity: 0;
-  color: #fff;
+  color: var(--bs-gray-dark);
   background: rgba(var(--bs-primary-rgb), 0.9);
   transition: opacity 0.25s ease;
   text-align: center;
