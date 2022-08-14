@@ -70,3 +70,16 @@ $(document).ready(function () {
     });
   });
 });
+/*
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+
+    $('.text-icon').css({
+      textShadow: "0px, 0px" + function () {
+        var elementHeight = $(this).height();
+        return (elementHeight - scrollTop) / elementHeight;
+      } + "rgba(var(--bs-primary-rgb), 0.5);" 
+    });
+  });
+});*/

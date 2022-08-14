@@ -137,7 +137,7 @@ h1, .h1 {
   text-shadow: 0px 0px 15px #fff;
   font-family: "Oxanium";
   letter-spacing: 20px;
-  font-size: 4.25rem !important;
+  font-size: 5.25vw !important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -189,6 +189,34 @@ abbr[data-bs-original-title] {
   cursor: help;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+
+.hovertext {
+  position: relative;
+  /*border-bottom: 1px dotted black;*/
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: var(--bs-gray-700);
+  color: var(--bs-gray-300);
+  text-align: center;
+  border-radius: 1px;
+  padding: 5px 5px;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
 }
 
 address {
@@ -257,6 +285,10 @@ sub {
 
 sup {
   top: -0.5em;
+}
+
+subtitle {
+  font-size: 1.3vw !important;
 }
 
 a {
@@ -7740,9 +7772,15 @@ textarea.form-control-lg {
 }
 
 .text-icon {
-  text-shadow: 0px 0px 15px rgba(var(--bs-primary-rgb), 0.5);
+  text-shadow: 0px 0px 20px rgba(var(--bs-primary-rgb), 0.5);
   --bs-text-opacity: 1;
   color: var(--bs-primary) !important;
+  transition: 0.2s;
+}
+.text-icon:hover {
+  text-shadow: 0px 0px 20px #0dcaf09e;
+  --bs-text-opacity: 1;
+  color: var(--bs-cyan) !important;
 }
 
 .text-secondary {
@@ -11256,7 +11294,8 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 5.5rem !important;
+    /*font-size: 2.5rem !important;*/
   }
 
   .fs-2 {
@@ -11433,7 +11472,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(0 0 0 / 80%) 100%), url(../assets/img/bg-masthead.jpg);
+  background: linear-gradient(to bottom, rgb(0 0 0) 0%, rgb(0 0 0 / 80%) 100%), url(../assets/img/IMG_1881.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
