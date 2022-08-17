@@ -74,6 +74,10 @@
   /*--bs-body-bg: #fff;*/
 }
 
+#honeypot {
+  display: none; /*makes the field not visible to humans*/
+}
+
 *,
 *::before,
 *::after {

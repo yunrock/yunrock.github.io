@@ -180,6 +180,9 @@
                     <div class="col-lg-6">
                       <!--data-sb-form-api-token="API_TOKEN"-->
                         <form id="gForm" class="gForm"  method="POST" action="https://script.google.com/macros/s/AKfycbwf5RsEqBLd8cUtSHmBvMNb6-ZsWLZhfhs-QIAX/exec">
+                            <!--input id must be honeypot or else it wont work-->
+                            <label class="sr-only">Keep this field blank</label>
+                            <input id="honeypot" type="text" name="honeypot" value="" />  
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."  />
@@ -240,13 +243,12 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Submit the Form to Google Using "AJAX" -->
-      <script data-cfasync="false" type="text/javascript"
-src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-        <!--<script data-cfasync="false" src="js/form-submission-handler.js"></script> -->
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Submit the Form to Google Using "AJAX" -->
+        <!--<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script> -->
+        <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
     </body>
 </html>
