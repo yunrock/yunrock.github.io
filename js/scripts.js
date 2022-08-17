@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+// https://script.google.com/macros/s/AKfycbwf5RsEqBLd8cUtSHmBvMNb6-ZsWLZhfhs-QIAX/exec
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -83,3 +83,7 @@ $(document).ready(function () {
     });
   });
 });*/
+
+
+
+
