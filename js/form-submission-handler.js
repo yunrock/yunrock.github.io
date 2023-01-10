@@ -2,11 +2,11 @@
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
-    var honeypot;
+    var sabrosura;
 
     var fields = Object.keys(elements).filter(function(k) {
-      if (elements[k].name === "honeypot") {
-        honeypot = elements[k].value;
+      if (elements[k].name === "sabrosura") {
+        sabrosura = elements[k].value;
         return false;
       }
       return true;
@@ -47,7 +47,7 @@
     formData.formGoogleSendEmail
       = form.dataset.email || ""; // no email by default
 
-    return {data: formData, honeypot: honeypot};
+    return {data: formData, honeypot: sabrosura};
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
